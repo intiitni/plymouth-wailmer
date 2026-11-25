@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v6
 
       - name: Archive wailmer folder
-        run: tar -czvf wailmer-${{ github.ref_name }}.tar.gz wailmer/
+        run: tar -czvf wailmer-${{ github.ref_name }}.tar.gz -C wailmer .
 
       - name: Create release and upload archive
         uses: softprops/action-gh-release@v3
